@@ -44,4 +44,10 @@ class UserController extends Controller
         return view('form', ['message' => 'not logged']);
 
     }
+    public function store(request $request)
+    {
+        $path=$request->file('image')->store('upload');
+        echo $path;
+    }
+
 }

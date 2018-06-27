@@ -15,7 +15,7 @@ class ArticleController extends Controller
     public function index()
     {
         $articles= Article::all();
-        //print_r($articles);
+
         return view('home',['articles' => $articles]);
     }
 

@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('home');
 });
 
@@ -29,3 +29,11 @@ Route::get('/update/{id}','ArticleController@update');
 Route::get('/read/{id}','ArticleController@read');
 Route::post('/edit/{id}','ArticleController@edit');
 Route::get('/delete/{id}','ArticleController@delete');
+//Route::get('/upload',function()
+//{
+//    return view('layouts.upload');
+//});
+Route::post('/store','UserController@store');
+Route::get('/file','FileController@showUploadForm')->name('upload.file');
+Route::get('/show','FileController@index');
+Route::post('/file','FileController@store');

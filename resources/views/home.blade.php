@@ -1,3 +1,4 @@
+{{--@extends('layouts.master')--}}
 @include('inc.header')
 <div class="container">
     <div class="row">
@@ -30,9 +31,9 @@
                         <td>{{ $article->title }}</td>
                         <td>{{ $article->description }}</td>
                         <td>
-                            <a href='{{ url("/read/{$article->id}") }}' class="label label-primary">Read </a>|
-                            <a href='{{ url("/update/{$article->id}") }}' class="label label-success">Update </a>|
-                            <a href='{{ url("/delete/{$article->id}") }}' class="label label-danger">Delete </a> |
+                            {{--<a href='{{ url("/read/{$article->id}") }}' class="label label-primary">Read </a>|--}}
+                             <a href='{{ url("/update/{$article->id}") }}' ><button class="btn btn-success">Update</button> </a>|
+                            <a href='{{ url("/delete/{$article->id}") }}' class="btn btn-danger">Delete </a> |
                         </td>
                     </tr>
                @endforeach
